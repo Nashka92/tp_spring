@@ -1,5 +1,6 @@
 package fr.cda.demospring.tp1_temperature;
 
+import fr.cda.demospring.tp1_temperature.dto.DtoConvert;
 import fr.cda.demospring.tp1_temperature.dto.TemperatureDto;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,6 +24,11 @@ public class TemperatureController {
         dto.setFahrenheit(temperatureService.celsiusAFahrenheit(celsius)); // Récup la méthode celsiusAFahrenheit
         dto.setKelvin(temperatureService.celsiusAKelvin(celsius)); // Récup la méthode celsiusAKelvin
         return dto; // retourne l'objet dto
+    }
+
+    @PostMapping("/convert")
+    public TemperatureService convertTemperature(@RequestBody DtoConvert){
+        return
     }
 
 }
