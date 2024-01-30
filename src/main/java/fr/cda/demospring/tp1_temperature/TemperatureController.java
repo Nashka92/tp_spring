@@ -28,7 +28,12 @@ public class TemperatureController {
 
     @PostMapping("/convert")
     public TemperatureService convertTemperature(@RequestBody DtoConvert){
-        return
+        return temperatureService.get(
+                convert.getUnit(),
+                convert.getValue()
+                // pas fini :(
+        );
     }
 
 }
+

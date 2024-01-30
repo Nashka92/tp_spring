@@ -1,8 +1,12 @@
 package fr.cda.demospring.tp1_temperature;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.stereotype.Service;
 
 @Service
+@Getter
+@Setter
 public class TemperatureService {
 
     // celsius toujours à 0
@@ -31,3 +35,10 @@ public class TemperatureService {
     }
 }
 
+/**
+ * {
+ *     kelvin: 0
+ *     celsius : 0
+ *     farhenheint: 0
+ * }
+ */
